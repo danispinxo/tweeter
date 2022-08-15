@@ -1,4 +1,6 @@
 nav {
+  top: 0;
+  position: fixed;
   display: flex;
   height: 120px;
   width: 100%;
@@ -22,4 +24,5 @@ nav span {
 
 nav i {
   color: darkred;
+  margin-top: -20px;
 }

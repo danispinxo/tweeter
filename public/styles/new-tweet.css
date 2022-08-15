@@ -1,0 +1,25 @@
+main button {
+  background-color: #4056A1;
+  font-family: 'Bungee';
+  color: white;
+  padding: .5em;
+}
+
+main textarea {
+  height: 50px;
+  width: 90%;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 5px;
+  border-color: black;
+  border-style: double;
+  background-color: #f4f1ec;
+}
+
+.button-counter {
+  width: 90%;
+  font-family: 'Bungee';
+  display: flex;
+  justify-content: space-between;
+}
