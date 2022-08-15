@@ -19,7 +19,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <!-- App JS -->
-    <script type="text/javascript" src="/scripts/client.js"></script>
+    <script type="text/javascript" src="./scripts/client.js"></script>
+    <script type="text/javascript" src="./scripts/composer-char-counter.js"></script>
   </head>
 
   <body>
@@ -32,7 +33,7 @@
       </div>
     </nav>
 
-    <header>
+    <header class="user-header">
       <div>
           <img src="./images/profile-hex.png"> 
       </div>
@@ -44,7 +45,7 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
-      <section class="new-tweet">
+      <section class="compose-tweet">
 
         <h2>Compose Tweet</h2>
 
@@ -54,13 +55,38 @@
           <textarea name="text" id="tweet-text"></textarea>
 
           <div class="button-counter">
-            <button type="submit">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text">140</output>
+            <button type="submit" id="tweet-btn">Tweet</button>
+            <output name="counter" class="counter" for="tweet-text" id="counter"> </output>
           </div>
 
         </form>
 
       </section>
+
+      <article class="tweet">
+        <header>
+          <div>
+            <i class="fa-solid fa-robot"></i>
+            <name>Personname</name> 
+          </div>
+          <address>@FakeUserName</address>
+        </header>
+        
+        <section class="existing-tweet">
+          <p>The fake tweet which will be a bit long just so I can see how it looks with more text available. How does this look now?</p>
+        </section>
+
+        <footer>
+          <date>## days ago</date>
+          <div class="icons">
+            <i class="fa-solid fa-flag" id="flag"></i>
+            <i class="fa-solid fa-retweet" id="retweet"></i>
+            <i class="fa-solid fa-heart" id="like"></i>
+          </div>
+
+        </footer>
+
+      </article>
 
     </main>
 

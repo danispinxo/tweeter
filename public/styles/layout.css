@@ -23,10 +23,8 @@ body {
 
 main {
   width: 90%;
-  padding-left: 10%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-content: center;
   background-color: #f4f1ec;
 }

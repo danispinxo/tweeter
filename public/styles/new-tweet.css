@@ -1,25 +1,89 @@
+main {
+  display: flex;
+  justify-content: center;
+}
+
 main button {
   background-color: #4056A1;
   font-family: 'Bungee';
   color: white;
-  padding: .5em;
 }
 
 main textarea {
   height: 50px;
-  width: 90%;
+  width: 100%;
   border-top: 0;
   border-left: 0;
   border-right: 0;
-  border-bottom: 5px;
+  border-bottom: 3px;
   border-color: black;
-  border-style: double;
+  border-style: solid;
   background-color: #f4f1ec;
+  font-size: medium;
+}
+
+main section.compose-tweet {
+  height: auto;
+  width: 100%;
+  padding: 15px;
+  margin: 20px;
 }
 
 .button-counter {
-  width: 90%;
+  width: 100%;
   font-family: 'Bungee';
   display: flex;
   justify-content: space-between;
+}
+
+.negative-warning {
+  color: red;
+}
+
+article.tweet {
+  height: auto;
+  width: 100%;
+  border: 2px;
+  border-color: black;
+  border-style: solid;
+  padding: 15px;
+  margin: 20px;
+}
+
+article.tweet:hover {
+  box-shadow: 7px 7px #9a9a9a;
+}
+
+article.tweet section.existing-tweet {
+  height: auto;
+  width: 100%;
+  font-size: 1.3rem;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 3px;
+  border-color: black;
+  border-style: solid;
+}
+
+article.tweet header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+article.tweet footer {
+  display: flex;
+  margin-top: 3px;
+  width: 100%;
+  justify-content: space-between;
+  font-size: small;
+}
+
+.icons {
+  font-size: medium;
+}
+
+#flag:hover, #like:hover, #retweet:hover {
+  color: #ba8b13;
 }
