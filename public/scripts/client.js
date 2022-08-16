@@ -66,7 +66,7 @@ const renderTweets = function(tweets) {
   // loops through tweets
   for (const tweetData of tweets) {
     const $tweet = createTweetElement(tweetData);
-    console.log($tweet);
+    // console.log($tweet);
     $(document).ready(function() {
       $('#tweets-container').append($tweet);
     });
@@ -105,3 +105,29 @@ const createTweetElement = function(tweet) {
 };
 
 renderTweets(data);
+
+$(document).ready(function() {
+  $(function() {
+    const $form = $('#tweet-form');
+    $form.submit(function(event) {
+      event.preventDefault();
+      const tweetText = $(this).serialize();      
+
+      $.ajax({
+        type: "POST",
+        url: '/tweets/',
+        data: tweetText,
+        success: function(res) {
+          console.log(res);
+        }
+
+      });
+
+      // $.ajax('/tweets/', { method: 'POST' })
+      // .then(function() {
+      //   console.log("Data sent to server. I think?");
+      // });
+      
+    });
+  });
+});
