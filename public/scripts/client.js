@@ -3,35 +3,18 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
-
-const calculateDaysAgo = function(created_at) {
-  let today = new Date();
-  let createdOn = new Date(created_at);
-  let msInDay = 24 * 60 * 60 * 1000;
-
-  createdOn.setHours(0,0,0,0);
-  today.setHours(0,0,0,0)
-
-  let diff = (+today - +createdOn)/msInDay
-  return diff;
-};
-
-const createDistanceMessage = function(daysAgo) {
-  if (daysAgo < 365) {
-    return `${daysAgo} days ago`;
-  } else if (daysAgo >= 365 && daysAgo < 730) {
-    return `1 year ago`;
-  } else {
-    const yearsAgo = Math.floor(daysAgo / 365);
-    return `${yearsAgo} years ago`;
-  }
+const safetyCheck = function (str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
 };
 
 const renderTweets = function(tweets) {
   // loops through tweets
+  tweets = tweets.reverse();
+
   for (const tweetData of tweets) {
     const $tweet = createTweetElement(tweetData);
-    // console.log($tweet);
     $(document).ready(function() {
       $('#tweets-container').append($tweet);
     });
@@ -41,8 +24,6 @@ const renderTweets = function(tweets) {
 };
 
 const createTweetElement = function(tweet) {
-  const daysAgo = calculateDaysAgo(tweet.created_at);
-  const distanceMessage = createDistanceMessage(daysAgo);
 
   return `
     <article class="tweet">
@@ -55,11 +36,11 @@ const createTweetElement = function(tweet) {
       </header>
 
       <section class="existing-tweet">
-        <p>${tweet.content.text}</p>
+        <p>${safetyCheck(tweet.content.text)}</p>
       </section>
 
       <footer>
-        <date>${distanceMessage}</date>
+        <date>${timeago.format(tweet.created_at)}</date>
         <div class="icons">
           <i class="fa-solid fa-flag" id="flag"></i>
           <i class="fa-solid fa-retweet" id="retweet"></i>
@@ -74,15 +55,27 @@ $(document).ready(function() {
     const $form = $('#tweet-form');
     $form.submit(function(event) {
       event.preventDefault();
-      const tweetText = $(this).serialize();      
+      const submittedText = document.getElementById('tweet-text').value;
+
+      if (submittedText.length <= 0) {
+        alert('Cannot post an empty tweet!');
+        return;
+      } else if (submittedText.length > 140) {
+        alert(`Tweets must be under 140 characters! Current tweet length: ${submittedText.length}`);
+        return;
+      }
+
+      const tweetText = $(this).serialize();
       $.ajax({
         type: "POST",
         url: '/tweets/',
         data: tweetText,
         success: function(res) {
           console.log(res);
+          location.reload();
         }
-      });      
+      })
+        // .then(this.reset());
     });
   });
 });
