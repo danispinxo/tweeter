@@ -3,6 +3,7 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
+
 const safetyCheck = function (str) {
   let div = document.createElement("div");
   div.appendChild(document.createTextNode(str));
@@ -14,13 +15,13 @@ const renderTweets = function(tweets) {
   tweets = tweets.reverse();
 
   for (const tweetData of tweets) {
+  // calls createTweetElement for each tweet
     const $tweet = createTweetElement(tweetData);
     $(document).ready(function() {
+  // takes return value and appends it to the tweets container
       $('#tweets-container').append($tweet);
     });
   }
-  // calls createTweetElement for each tweet
-  // takes return value and appends it to the tweets container
 };
 
 const createTweetElement = function(tweet) {
@@ -78,6 +79,7 @@ $(document).ready(function() {
         success: function(res) {
           console.log(res);
           location.reload();
+          loadTweets();
         }
       })
         // .then(this.reset());
