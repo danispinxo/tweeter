@@ -49,6 +49,23 @@ const createTweetElement = function(tweet) {
       </footer>
     </article>`;
 };
+$(document).ready(function() {
+  $("#toggle-btn").on("click", function() {
+    $("#compose-tweet-box").toggle("slow");
+    $("#tweet-text").focus();
+
+    let scrollTo = $('#compose-tweet-box');
+
+    // Calculating new position of scrollbar
+    let position = scrollTo.offset().top 
+            - body.offset().top 
+            + body.scrollTop();
+
+    // Setting the value of scrollbar
+    body.scrollTop(position);
+
+  });
+});
 
 $(document).ready(function() {
   $(function() {
@@ -58,12 +75,17 @@ $(document).ready(function() {
       const submittedText = document.getElementById('tweet-text').value;
 
       if (submittedText.length <= 0) {
-        alert('Cannot post an empty tweet!');
+        $('#long-tweet-msg').hide();
+        $('#empty-tweet-msg').show("slow");
         return;
       } else if (submittedText.length > 140) {
-        alert(`Tweets must be under 140 characters! Current tweet length: ${submittedText.length}`);
+        $('#empty-tweet-msg').hide();
+        $('#long-tweet-msg').show("slow");
         return;
       }
+
+      $('#empty-tweet-msg').hide();
+      $('#long-tweet-msg').hide();
 
       const tweetText = $(this).serialize();
       $.ajax({

@@ -4,7 +4,7 @@ nav {
   display: flex;
   height: 120px;
   width: 100%;
-  background: #4056A1;
+  background: #273976;
   color: #FFFFFF;
   padding-left: 1.5em;
   padding-right: 1.5em;
@@ -23,6 +23,17 @@ nav span {
 }
 
 nav i {
-  color: darkred;
+  color: white;
   margin-top: -20px;
+}
+
+#toggle-btn {
+  position: relative;
+  bottom: 0;
+  transition: bottom ease 0.5s;
+}
+
+#toggle-btn:hover {
+  color: #daa520;
+  bottom: -10px;
 }

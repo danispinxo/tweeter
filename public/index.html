@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="./styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="./styles/header.css" type="text/css" />
     <link rel="stylesheet" href="./styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="./styles/old-tweets.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -30,7 +31,7 @@
       <span>Tweeter</span>
       <div class="toggle">
         <p style="text-align: right;"><strong>Write</strong> a new tweet</p>
-        <i class="fa-solid fa-angles-down"></i>
+        <i class="fa-solid fa-angles-down" id="toggle-btn"></i>
       </div>
     </nav>
 
@@ -46,7 +47,7 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
-      <section class="compose-tweet">
+      <section class="compose-tweet" id="compose-tweet-box">
 
         <h2>Compose Tweet</h2>
 
@@ -58,7 +59,16 @@
             <output name="counter" class="counter" for="tweet-text" id="counter"> </output>
           </div>
         </form>
-
+        
+        <div class="emsg" id="empty-tweet-msg">
+          <i class="fa-solid fa-circle-exclamation"></i>
+          <span>Cannot post an empty tweet!</span>
+        </div>
+        <div class="emsg" id="long-tweet-msg">
+          <i class="fa-solid fa-circle-exclamation"></i>
+          <span>Tweets must be under 140 characters!</span>
+        </div>
+        
       </section>
 
     <section id="tweets-container">
