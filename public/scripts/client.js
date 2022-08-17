@@ -49,22 +49,14 @@ const createTweetElement = function(tweet) {
       </footer>
     </article>`;
 };
+
 $(document).ready(function() {
   $("#toggle-btn").on("click", function() {
     $("#compose-tweet-box").toggle("slow");
     $("#tweet-text").focus();
-
-    let scrollTo = $('#compose-tweet-box');
-
-    // Calculating new position of scrollbar
-    let position = scrollTo.offset().top 
-            - body.offset().top 
-            + body.scrollTop();
-
-    // Setting the value of scrollbar
-    body.scrollTop(position);
-
+    $(window).scrollTop($('#compose-tweet-box').offset().top);
   });
+
 });
 
 $(document).ready(function() {
