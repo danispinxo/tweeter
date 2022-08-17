@@ -28,3 +28,18 @@ main {
   justify-content: center;
   background-color: #f4f1ec;
 }
+
+#scroll-circle{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 25px;
+  right: 25px;
+  width: 75px;
+  height: 75px;
+  background: darkred;
+  color: #f4f1ec;
+  border-radius: 50%;
+  opacity: 75%;
+  position: fixed;
+}

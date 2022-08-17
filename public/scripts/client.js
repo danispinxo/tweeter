@@ -51,15 +51,6 @@ const createTweetElement = function(tweet) {
 };
 
 $(document).ready(function() {
-  $("#toggle-btn").on("click", function() {
-    $("#compose-tweet-box").toggle("slow");
-    $("#tweet-text").focus();
-    $(window).scrollTop($('#compose-tweet-box').offset().top);
-  });
-
-});
-
-$(document).ready(function() {
   $(function() {
     const $form = $('#tweet-form');
     $form.submit(function(event) {

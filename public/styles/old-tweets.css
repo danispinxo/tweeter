@@ -41,6 +41,7 @@ article.tweet footer {
 
 .icons {
   font-size: medium;
+  color: #4056A1;
 }
 
 #flag:hover, #like:hover, #retweet:hover {
