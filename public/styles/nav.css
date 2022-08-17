@@ -2,7 +2,7 @@ nav {
   top: 0;
   position: fixed;
   display: flex;
-  height: 120px;
+  height: 7.5rem;
   width: 100%;
   /* background: #273976; */
   color: #FFFFFF;
@@ -24,7 +24,7 @@ nav span {
 
 nav i {
   color: white;
-  margin-top: -20px;
+  margin-top: -1.25rem;
 }
 
 #toggle-btn {
@@ -35,5 +35,5 @@ nav i {
 
 #toggle-btn:hover {
   color: #4056A1;
-  bottom: -10px;
+  bottom: -0.625rem;
 }

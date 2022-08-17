@@ -1,11 +1,11 @@
 article.tweet {
   height: auto;
   width: 100%;
-  border: 2px;
+  border: 0.12rem;
   border-color: black;
   border-style: solid;
-  padding: 15px;
-  margin: 20px;
+  padding: 1rem;
+  margin: 1rem;
 }
 
 article.tweet:hover {
@@ -20,7 +20,7 @@ article.tweet section.existing-tweet {
   border-top: 0;
   border-left: 0;
   border-right: 0;
-  border-bottom: 3px;
+  border-bottom: 0.13rem;
   border-color: black;
   border-style: solid;
 }
@@ -33,7 +33,7 @@ article.tweet header {
 
 article.tweet footer {
   display: flex;
-  margin-top: 3px;
+  margin-top: 0.2rem;
   width: 100%;
   justify-content: space-between;
   font-size: small;
