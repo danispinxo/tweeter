@@ -1,5 +1,7 @@
 $(document).ready(function() {
 
+  $("#scroll-circle").hide();
+
   // Turn counter red if tweet is too long
   let counter = 140;
   let outputText = document.getElementById("counter");
@@ -8,11 +10,11 @@ $(document).ready(function() {
   $("#tweet-text").on("keydown", function() {
     let tweetText = document.getElementById("tweet-text").value;
 
-    if (tweetText.length === 0) {
+    if (tweetText.length == 0) {
       counter = 140;
     }
 
-    counter = 140 - (tweetText.length + 1);
+    counter = 140 - tweetText.length;
     outputText.textContent = counter;
 
     if (counter < 0) {
@@ -32,7 +34,7 @@ $(document).ready(function() {
 
     if (body === 0) {
       $("nav").show();
-      $("#scroll-circle").hide()
+      $("#scroll-circle").hide();
     } else {
       $("nav").hide();
       $("#scroll-circle").show();

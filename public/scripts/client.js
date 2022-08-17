@@ -54,8 +54,10 @@ const createTweetElement = function(tweet) {
 $(document).ready(function() {
   $(function() {
     const $form = $('#tweet-form');
+
     $form.submit(function(event) {
       event.preventDefault();
+
       const submittedText = document.getElementById('tweet-text').value;
 
       if (submittedText.length <= 0) {
@@ -72,31 +74,42 @@ $(document).ready(function() {
       $('#long-tweet-msg').hide();
 
       const tweetText = $(this).serialize();
+
       $.ajax({
         type: "POST",
         url: '/tweets/',
         data: tweetText,
         success: function(res) {
           console.log(res);
-          location.reload();
-          loadTweets();
+          renderTweets(res);
+        },
+        error: function(error) {
+          console.error(error);
         }
       })
-        // .then(this.reset());
+        .then(() => {
+          this.reset();
+          $("#counter").val(140);
+          $('#tweets-container').empty();
+          loadTweets();
+      });
+
     });
+
   });
 });
 
 const loadTweets = function() {
-  $(document).ready(function() {
-    $.ajax( {
-      type: 'GET',
-      url: '/tweets/',
-      success: function(res) {
-        $('#tweets-container').append(renderTweets(res));
-      }
-    })
+
+  $.ajax( {
+    type: 'GET',
+    url: '/tweets/',
+    success: function(res) {
+      $('#tweets-container').append(renderTweets(res));
+    }
   });
 };
 
-loadTweets();
+$(document).ready(function() {
+  loadTweets();
+});
