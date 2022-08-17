@@ -1,9 +1,20 @@
+/* Mobile Styles */
+
+main {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  background-color: #f4f1ec;
+}
+
 main section.compose-tweet {
   display: none;
   height: auto;
-  width: 100%;
-  padding: 15px;
-  margin: 20px;
+  width: 90%;
+  margin: 1rem auto;
 }
 
 main textarea {
@@ -48,4 +59,20 @@ main button {
   border: 0.125rem;
   border-style: dotted;
   border-color: #481f1f;
+}
+
+/* Tablet Styles */
+@media only screen and (min-width: 768px) {
+
+}
+
+/* Desktoop Styles */
+
+@media only screen and (min-width: 1024px) {
+
+  main {
+    width: 70%;
+    margin: 1rem auto;
+  }
+
 }

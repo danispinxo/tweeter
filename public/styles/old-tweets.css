@@ -5,7 +5,7 @@ article.tweet {
   border-color: black;
   border-style: solid;
   padding: 1rem;
-  margin: 1rem;
+  margin: 1rem auto;
 }
 
 article.tweet:hover {
@@ -46,4 +46,35 @@ article.tweet footer {
 
 #flag:hover, #like:hover, #retweet:hover {
   color: #cb9815;
+}
+
+#tweets-container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* Mobile Styles */
+
+
+/* Tablet Styles */
+@media only screen and (min-width: 768px) {
+
+}
+
+/* Desktoop Styles */
+
+@media only screen and (min-width: 1024px) {
+
+  #tweets-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  article.tweet {
+    width: 90%;
+    margin: 1rem auto;
+  }
 }

@@ -1,10 +1,11 @@
+/* Mobile Styles */
+
 nav {
   top: 0;
   position: fixed;
   display: flex;
   height: 7.5rem;
   width: 100%;
-  /* background: #273976; */
   color: #FFFFFF;
   padding-left: 1.5em;
   padding-right: 1.5em;
@@ -36,4 +37,24 @@ nav i {
 #toggle-btn:hover {
   color: #4056A1;
   bottom: -0.625rem;
+}
+
+/* Tablet Styles */
+@media only screen and (min-width: 768px) {
+
+}
+
+/* Desktop Styles */
+
+@media only screen and (min-width: 1024px) {
+
+  nav {
+    background: #273976;
+  }
+
+  #toggle-btn:hover {
+    color: #cb9815;
+    bottom: -0.625rem;
+  }
+
 }
