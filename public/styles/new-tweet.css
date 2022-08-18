@@ -31,7 +31,10 @@ main textarea {
 main button {
   background-color: #4056A1;
   font-family: "Bungee";
-  color: white;
+  color: #f4f1ec;
+}
+main button:focus {
+  color: #cb9815;
 }
 
 .button-counter {

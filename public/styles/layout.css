@@ -42,7 +42,6 @@ body {
 }
 #scroll-circle:hover {
   transform: translateY(-3px);
-  color: #cb9815;
   box-shadow: 4px 4px 4px #545149;
   cursor: pointer;
 }

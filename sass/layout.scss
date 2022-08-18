@@ -43,7 +43,6 @@ body {
 
   &:hover {
     transform: translateY(-3px);
-    color: presets.$golden-yellow;
     box-shadow: 4px 4px 4px presets.$shadow-grey;
     cursor: pointer;
   }

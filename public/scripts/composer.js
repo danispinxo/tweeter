@@ -5,9 +5,11 @@ $(document).ready(function() {
   let outputText = document.getElementById("counter");
   outputText.textContent = counter;
 
-  $("#tweet-text").on("keydown", function() {
+  $("#tweet-text").on("keyup", function() {
 // counter tracks the length of the input textarea and subtracts it from 140 to calculate remaining character count
-    let tweetText = document.getElementById("tweet-text").value;
+    // let tweetText = document.getElementById("tweet-text").value;
+    
+    let tweetText = $("#tweet-text").val();
     if (tweetText.length === 0) {
       counter = 140;
     }
@@ -29,10 +31,10 @@ $(document).ready(function() {
     $("#scroll-circle").hide();
     const body = $("body, html").scrollTop();
     if (body === 0) {
-      $("nav").show();
+      $("nav").slideDown();
       $("#scroll-circle").hide();
     } else {
-      $("nav").hide();
+      $("nav").slideUp();
       $("#scroll-circle").show();
     }
   });

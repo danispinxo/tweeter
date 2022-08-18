@@ -34,7 +34,11 @@ main {
   button {
     background-color: presets.$navy-blue;
     font-family: 'Bungee';
-    color: white;
+    color: presets.$background-colour;
+
+    &:focus {
+      color: presets.$golden-yellow;
+    }
   }
   
 }
