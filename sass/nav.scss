@@ -35,11 +35,12 @@ nav {
   position: relative;
   bottom: 0;
   transition: bottom ease 0.5s;
-}
 
-#toggle-btn:hover {
-  color: presets.$navy-blue;
-  bottom: -0.625rem;
+  &:hover {
+    color: presets.$navy-blue;
+    bottom: -0.625rem;
+  }
+
 }
 
 /* Tablet Styles */

@@ -30,7 +30,6 @@ nav i {
   bottom: 0;
   transition: bottom ease 0.5s;
 }
-
 #toggle-btn:hover {
   color: #4056A1;
   bottom: -0.625rem;

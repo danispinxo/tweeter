@@ -59,11 +59,11 @@ $(document).ready(function() {
       // posting error messages for empty or too-long tweets
       if (submittedText.length <= 0) {
         $("#long-tweet-msg").hide();
-        $("#empty-tweet-msg").show("slow");
+        $("#empty-tweet-msg").slideDown("slow");
         return;
       } else if (submittedText.length > 140) {
         $("#empty-tweet-msg").hide();
-        $("#long-tweet-msg").show("slow");
+        $("#long-tweet-msg").slideDown("slow");
         return;
       }
       // toggling the tweet messages

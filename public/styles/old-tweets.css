@@ -8,6 +8,9 @@ article.tweet {
   padding: 1rem;
   margin: 1rem auto;
 }
+article.tweet:hover {
+  box-shadow: 7px 7px #545149;
+}
 article.tweet header {
   display: flex;
   width: 100%;
@@ -31,10 +34,6 @@ article.tweet footer {
   width: 100%;
   justify-content: space-between;
   font-size: small;
-}
-
-article.tweet:hover {
-  box-shadow: 7px 7px #545149;
 }
 
 .icons {
