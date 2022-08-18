@@ -1,0 +1,87 @@
+$background-colour: #f4f1ec;
+$navy-blue: #4056A1;
+$dark-red: #582b2b;
+$shadow-grey: #545149;
+$golden-yellow: #cb9815;
+
+article.tweet {
+  height: auto;
+  width: 100%;
+  border: 0.12rem;
+  border-color: black;
+  border-style: solid;
+  padding: 1rem;
+  margin: 1rem auto;
+
+  header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  section.existing-tweet {
+    overflow-wrap: break-word;
+    height: auto;
+    width: 100%;
+    font-size: 1.3rem;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0.13rem;
+    border-color: black;
+    border-style: solid;
+  }
+
+  footer {
+    display: flex;
+    margin-top: 0.2rem;
+    width: 100%;
+    justify-content: space-between;
+    font-size: small;
+  }
+
+}
+
+article.tweet:hover {
+  box-shadow: 7px 7px $shadow-grey;
+}
+
+.icons {
+  font-size: medium;
+  color: $navy-blue;
+}
+
+#flag:hover, #like:hover, #retweet:hover {
+  color: $golden-yellow;
+}
+
+#tweets-container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* Mobile Styles */
+
+
+/* Tablet Styles */
+@media only screen and (min-width: 768px) {
+
+}
+
+/* Desktoop Styles */
+
+@media only screen and (min-width: 1024px) {
+
+  #tweets-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  article.tweet {
+    width: 90%;
+    margin: 1rem auto;
+  }
+}

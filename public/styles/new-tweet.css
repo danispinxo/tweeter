@@ -1,5 +1,4 @@
 /* Mobile Styles */
-
 main {
   width: 90%;
   margin: 0 auto;
@@ -9,14 +8,12 @@ main {
   align-content: center;
   background-color: #f4f1ec;
 }
-
 main section.compose-tweet {
   display: none;
   height: auto;
   width: 90%;
   margin: 1rem auto;
 }
-
 main textarea {
   height: 50px;
   width: 100%;
@@ -31,22 +28,21 @@ main textarea {
   padding: 10px;
   margin: 5px;
 }
+main button {
+  background-color: #4056A1;
+  font-family: "Bungee";
+  color: white;
+}
 
 .button-counter {
   width: 100%;
-  font-family: 'Bungee';
+  font-family: "Bungee";
   display: flex;
   justify-content: space-between;
 }
 
 .negative-warning {
-  color: #b01515;
-}
-
-main button {
-  background-color: #4056A1;
-  font-family: 'Bungee';
-  color: white;
+  color: #582b2b;
 }
 
 .emsg {
@@ -58,21 +54,14 @@ main button {
   font-weight: 600;
   border: 0.125rem;
   border-style: dotted;
-  border-color: #481f1f;
+  border-color: #582b2b;
 }
 
 /* Tablet Styles */
-@media only screen and (min-width: 768px) {
-
-}
-
 /* Desktoop Styles */
-
 @media only screen and (min-width: 1024px) {
-
   main {
     width: 70%;
     margin: 1rem auto;
   }
-
 }

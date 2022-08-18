@@ -6,7 +6,6 @@
 html {
   box-sizing: border-box;
 }
-
 *, *:before, *:after {
   box-sizing: inherit;
 }
@@ -14,18 +13,25 @@ html {
 /*
  * Global layout stuff
  */
+
 /* Mobile Styles */
+$background-colour: #f4f1ec;
+$navy-blue: #4056A1;
+$dark-red: #582b2b;
+$shadow-grey: #545149;
+$golden-yellow: #cb9815;
+
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: #545149;
-  background-color: #f4f1ec;
+  color: $shadow-grey;
+  background-color: $background-colour;
   font-size: 1.5rem;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
-#scroll-circle {
+#scroll-circle{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -33,15 +39,20 @@ body {
   right: 1.5rem;
   width: 4.7rem;
   height: 4.7rem;
-  background: #582b2b;
-  color: #f4f1ec;
+  background: $dark-red;
+  color: $background-colour;
   border-radius: 50%;
   opacity: 75%;
   position: fixed;
 }
 
 /* Tablet Styles */
+@media only screen and (min-width: 768px) {
+
+}
+
 /* Desktoop Styles */
+
 @media only screen and (min-width: 1024px) {
   body {
     display: flex;
@@ -49,4 +60,5 @@ body {
     justify-content: space-around;
     padding-top: 8.5rem;
   }
+
 }

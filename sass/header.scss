@@ -1,4 +1,11 @@
+$background-colour: #f4f1ec;
+$navy-blue: #4056A1;
+$dark-red: #582b2b;
+$shadow-grey: #545149;
+$golden-yellow: #cb9815;
+
 /* Mobile Styles */
+
 .user-header {
   display: flex;
   height: 25rem;
@@ -8,7 +15,7 @@
   justify-content: center;
   align-items: center;
   align-content: center;
-  background-color: #cb9815;
+  background-color: $golden-yellow;
   background-image: url("https://www.transparenttextures.com/patterns/tex2res4.png");
 }
 
@@ -18,10 +25,18 @@ header p {
 }
 
 /* Tablet Styles */
+@media only screen and (min-width: 768px) {
+
+}
+
 /* Desktoop Styles */
+
 @media only screen and (min-width: 1024px) {
+
   .user-header {
     width: 30%;
     margin: 3rem 1rem 0 1rem;
+
   }
+
 }

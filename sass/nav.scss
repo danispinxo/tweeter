@@ -1,3 +1,9 @@
+$background-colour: #f4f1ec;
+$navy-blue: #4056A1;
+$dark-red: #582b2b;
+$shadow-grey: #545149;
+$golden-yellow: #cb9815;
+
 /* Mobile Styles */
 nav {
   top: 0;
@@ -10,13 +16,16 @@ nav {
   padding-right: 1.5em;
   justify-content: space-between;
   align-items: center;
-}
-nav span {
-  font-family: "Bungee";
-}
-nav i {
-  color: white;
-  margin-top: -1.25rem;
+
+  span {
+    font-family: 'Bungee';
+  }
+
+  i {
+    color: white;
+    margin-top: -1.25rem;
+  }
+
 }
 
 .toggle {
@@ -25,6 +34,7 @@ nav i {
   align-items: center;
 }
 
+
 #toggle-btn {
   position: relative;
   bottom: 0;
@@ -32,18 +42,26 @@ nav i {
 }
 
 #toggle-btn:hover {
-  color: #4056A1;
+  color: $navy-blue;
   bottom: -0.625rem;
 }
 
 /* Tablet Styles */
+@media only screen and (min-width: 768px) {
+
+}
+
 /* Desktop Styles */
+
 @media only screen and (min-width: 1024px) {
+
   nav {
-    background: #4056A1;
+    background: $navy-blue;
   }
+
   #toggle-btn:hover {
-    color: #cb9815;
+    color: $golden-yellow;
     bottom: -0.625rem;
   }
+
 }
