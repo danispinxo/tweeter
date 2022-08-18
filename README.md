@@ -2,17 +2,41 @@
 
 Tweeter is a simple, single-page Twitter clone.
 
-This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express back-end skills.
-
-## Getting Started
-
-1. [Create](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) a new repository using this repository as a template.
-2. Clone your repository onto your local device.
-3. Install dependencies using the `npm install` command.
-3. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
-4. Go to <http://localhost:8080/> in your browser.
+This repository is the starter code for the project. I started by forking and cloning the original repository. Then I built upon it to practice my HTML, CSS, JS, jQuery and AJAX front-end skills, as well as my Node, Express back-end skills.
 
 ## Dependencies
 
 - Express
 - Node 5.10.x or above
+- Body Parser
+- Chance
+- MD5
+- TimeAgo
+- Nodedemon (not required for running, used server-side)
+
+## Screenshots
+- placeholder
+
+## Features
+
+This project employs the following features from this week's learning material. 
+
+### Flexbox & Responsive Design
+
+This project uses Flexbox for layout and design in all elements. It makes use of Flexbox's adaptability to have responsive design across media types with different layouts for mobile/tablet and desktop clients.  
+
+### AJAX Requests
+
+This project uses AJAX requests to update the existing tweets container when a new tweet is submitted via AJAX post request. No loading of the page is necessary for the tweet database to update on screen! 
+
+### Cross-Site Scripting Protection
+
+This project makes use of a JavaScript escape function to avoid cross-site scripting. Safety first! 
+
+### CSS & SASS 
+
+This project uses Sass to organize, nest, and simplify the CSS, including variables, modules, and mixins. 
+
+## Acknowledgements
+
+Once again, I'd like to thank the great LHL mentors who helped me so much with this project, especially Pedro, Juliana, Matthew, and Nosa. 
