@@ -3,9 +3,9 @@ main {
   width: 90%;
   margin: 0 auto;
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-content: center;
+  align-items: center;
+  flex-direction: column;
   background-color: #f4f1ec;
 }
 main section.compose-tweet {
@@ -42,26 +42,26 @@ main button {
 }
 
 .negative-warning {
-  color: #582b2b;
+  color: #a92a2a;
 }
 
 .emsg {
   display: none;
   background-color: #f1cfcf;
-  color: #582b2b;
+  color: #a92a2a;
   margin: 1rem;
   padding: 0.5rem;
   font-weight: 600;
   border: 0.125rem;
   border-style: dotted;
-  border-color: #582b2b;
+  border-color: #a92a2a;
 }
 
 /* Tablet Styles */
 /* Desktoop Styles */
 @media only screen and (min-width: 1024px) {
   main {
-    width: 70%;
+    width: 60%;
     margin: 1rem auto;
   }
 }

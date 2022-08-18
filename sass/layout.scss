@@ -28,10 +28,8 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
 }
 
-#scroll-circle{
-  display: flex;
-  justify-content: center;
-  align-items: center;
+#scroll-circle {
+  @include presets.flexXYcenter();
   bottom: 1.5rem;
   right: 1.5rem;
   width: 4.7rem;
@@ -41,6 +39,15 @@ body {
   border-radius: 50%;
   opacity: 75%;
   position: fixed;
+  box-shadow: 2px 2px 2px presets.$shadow-grey;
+
+  &:hover {
+    transform: translateY(-3px);
+    color: presets.$golden-yellow;
+    box-shadow: 4px 4px 4px presets.$shadow-grey;
+    cursor: pointer;
+  }
+
 }
 
 /* Tablet Styles */

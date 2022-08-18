@@ -13,8 +13,18 @@ article.tweet:hover {
 }
 article.tweet header {
   display: flex;
-  width: 100%;
+  justify-content: center;
+  align-items: center;
   justify-content: space-between;
+  width: 100%;
+}
+article.tweet header div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+article.tweet header div img {
+  margin-right: 0.5em;
 }
 article.tweet section.existing-tweet {
   overflow-wrap: break-word;
@@ -30,9 +40,11 @@ article.tweet section.existing-tweet {
 }
 article.tweet footer {
   display: flex;
-  margin-top: 0.2rem;
-  width: 100%;
+  justify-content: center;
+  align-items: center;
   justify-content: space-between;
+  margin-top: 0.5rem;
+  width: 100%;
   font-size: small;
 }
 

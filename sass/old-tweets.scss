@@ -15,9 +15,18 @@ article.tweet {
   }
 
   header {
-    display: flex;
-    width: 100%;
+    @include presets.flexXYcenter();
     justify-content: space-between;
+    width: 100%;
+
+    div {
+      @include presets.flexXYcenter();
+
+      img {
+        margin-right: 0.5em;
+      }
+    }
+
   }
 
   section.existing-tweet {
@@ -34,10 +43,10 @@ article.tweet {
   }
 
   footer {
-    display: flex;
-    margin-top: 0.2rem;
-    width: 100%;
+    @include presets.flexXYcenter();
     justify-content: space-between;
+    margin-top: 0.5rem;
+    width: 100%;
     font-size: small;
   }
 }

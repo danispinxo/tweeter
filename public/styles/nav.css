@@ -1,34 +1,33 @@
 /* Mobile Styles */
 nav {
-  top: 0;
-  position: fixed;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   height: 7.5rem;
   width: 100%;
   color: #FFFFFF;
   padding-left: 1.5em;
   padding-right: 1.5em;
-  justify-content: space-between;
-  align-items: center;
+  position: fixed;
+  top: 0;
 }
 nav span {
   font-family: "Bungee";
 }
-nav i {
-  color: white;
-  margin-top: -1.25rem;
-}
 
 .toggle {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 #toggle-btn {
   position: relative;
   bottom: 0;
   transition: bottom ease 0.5s;
+  color: #a92a2a;
+  margin-top: -1.25rem;
 }
 #toggle-btn:hover {
   color: #4056A1;

@@ -5,10 +5,8 @@
 main {
   width: 90%;
   margin: 0 auto;
-  display: flex;
+  @include presets.flexXYcenter();
   flex-direction: column;
-  justify-content: center;
-  align-content: center;
   background-color: presets.$background-colour;
 
   section.compose-tweet {
@@ -74,7 +72,7 @@ main {
 @media only screen and (min-width: 1024px) {
 
   main {
-    width: 70%;
+    width: 60%;
     margin: 1rem auto;
   }
 

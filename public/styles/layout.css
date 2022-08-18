@@ -33,11 +33,18 @@ body {
   right: 1.5rem;
   width: 4.7rem;
   height: 4.7rem;
-  background: #582b2b;
+  background: #a92a2a;
   color: #f4f1ec;
   border-radius: 50%;
   opacity: 75%;
   position: fixed;
+  box-shadow: 2px 2px 2px #545149;
+}
+#scroll-circle:hover {
+  transform: translateY(-3px);
+  color: #cb9815;
+  box-shadow: 4px 4px 4px #545149;
+  cursor: pointer;
 }
 
 /* Tablet Styles */

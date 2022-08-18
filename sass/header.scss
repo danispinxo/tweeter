@@ -2,14 +2,11 @@
 
 /* Mobile Styles */
 .user-header {
-  display: flex;
+  @include presets.flexXYcenter();
+  flex-direction: column;
   height: 25rem;
   padding-top: 3.5rem;
   width: 100%;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
   background-color: presets.$golden-yellow;
   background-image: url("https://www.transparenttextures.com/patterns/tex2res4.png");
 }
