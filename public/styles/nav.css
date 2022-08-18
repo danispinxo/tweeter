@@ -34,7 +34,6 @@ nav span {
   bottom: -0.625rem;
 }
 
-/* Tablet Styles */
 /* Desktop Styles */
 @media only screen and (min-width: 1024px) {
   nav {

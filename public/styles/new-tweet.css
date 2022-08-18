@@ -60,7 +60,6 @@ main button:focus {
   border-color: #a92a2a;
 }
 
-/* Tablet Styles */
 /* Desktoop Styles */
 @media only screen and (min-width: 1024px) {
   main {

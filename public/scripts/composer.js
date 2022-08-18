@@ -7,7 +7,6 @@ $(document).ready(function() {
 
   $("#tweet-text").on("keyup", function() {
 // counter tracks the length of the input textarea and subtracts it from 140 to calculate remaining character count
-    // let tweetText = document.getElementById("tweet-text").value;
     
     let tweetText = $("#tweet-text").val();
     if (tweetText.length === 0) {
