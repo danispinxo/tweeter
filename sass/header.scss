@@ -1,11 +1,6 @@
-$background-colour: #f4f1ec;
-$navy-blue: #4056A1;
-$dark-red: #582b2b;
-$shadow-grey: #545149;
-$golden-yellow: #cb9815;
+@use 'layout';
 
 /* Mobile Styles */
-
 .user-header {
   display: flex;
   height: 25rem;
@@ -15,7 +10,7 @@ $golden-yellow: #cb9815;
   justify-content: center;
   align-items: center;
   align-content: center;
-  background-color: $golden-yellow;
+  background-color: layout.$golden-yellow;
   background-image: url("https://www.transparenttextures.com/patterns/tex2res4.png");
 }
 
@@ -30,13 +25,11 @@ header p {
 }
 
 /* Desktoop Styles */
-
 @media only screen and (min-width: 1024px) {
 
   .user-header {
     width: 30%;
-    margin: 3rem 1rem 0 1rem;
-
+    margin: 2rem 0 0 2.5rem;
   }
 
 }

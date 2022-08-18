@@ -1,8 +1,4 @@
-$background-colour: #f4f1ec;
-$navy-blue: #4056A1;
-$dark-red: #582b2b;
-$shadow-grey: #545149;
-$golden-yellow: #cb9815;
+@use 'layout';
 
 /* Mobile Styles */
 nav {
@@ -42,7 +38,7 @@ nav {
 }
 
 #toggle-btn:hover {
-  color: $navy-blue;
+  color: layout.$navy-blue;
   bottom: -0.625rem;
 }
 
@@ -56,11 +52,11 @@ nav {
 @media only screen and (min-width: 1024px) {
 
   nav {
-    background: $navy-blue;
+    background: layout.$navy-blue;
   }
 
   #toggle-btn:hover {
-    color: $golden-yellow;
+    color: layout.$golden-yellow;
     bottom: -0.625rem;
   }
 

@@ -1,9 +1,6 @@
-$background-colour: #f4f1ec;
-$navy-blue: #4056A1;
-$dark-red: #582b2b;
-$shadow-grey: #545149;
-$golden-yellow: #cb9815;
+@use 'layout';
 
+/* Mobile Styles */
 article.tweet {
   height: auto;
   width: 100%;
@@ -39,39 +36,35 @@ article.tweet {
     justify-content: space-between;
     font-size: small;
   }
-
 }
 
 article.tweet:hover {
-  box-shadow: 7px 7px $shadow-grey;
+  box-shadow: 7px 7px layout.$shadow-grey;
 }
 
 .icons {
   font-size: medium;
-  color: $navy-blue;
+  color: layout.$navy-blue;
 }
 
 #flag:hover, #like:hover, #retweet:hover {
-  color: $golden-yellow;
+  color: layout.$golden-yellow;
 }
 
 #tweets-container {
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
 }
 
-/* Mobile Styles */
-
-
 /* Tablet Styles */
 @media only screen and (min-width: 768px) {
-
+  #tweets-container{
+    width: 90%;
+  }
 }
 
-/* Desktoop Styles */
-
+/* Desktop Styles */
 @media only screen and (min-width: 1024px) {
-
   #tweets-container {
     display: flex;
     flex-direction: column;

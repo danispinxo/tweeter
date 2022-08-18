@@ -3,6 +3,12 @@
  * https://css-tricks.com/international-box-sizing-awareness-day/
  * Do not modify these two selectors, please
  */
+ $background-colour: #f4f1ec;
+ $navy-blue: #4056A1;
+ $dark-red: #582b2b;
+ $shadow-grey: #545149;
+ $golden-yellow: #cb9815;
+
 html {
   box-sizing: border-box;
 }
@@ -15,12 +21,6 @@ html {
  */
 
 /* Mobile Styles */
-$background-colour: #f4f1ec;
-$navy-blue: #4056A1;
-$dark-red: #582b2b;
-$shadow-grey: #545149;
-$golden-yellow: #cb9815;
-
 body {
   margin: 0;
   padding: 0;
@@ -60,5 +60,4 @@ body {
     justify-content: space-around;
     padding-top: 8.5rem;
   }
-
 }

@@ -1,8 +1,4 @@
-$background-colour: #f4f1ec;
-$navy-blue: #4056A1;
-$dark-red: #582b2b;
-$shadow-grey: #545149;
-$golden-yellow: #cb9815;
+@use 'layout';
 
 /* Mobile Styles */
 
@@ -13,7 +9,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-content: center;
-  background-color: $background-colour;
+  background-color: layout.$background-colour;
 
   section.compose-tweet {
     display: none;
@@ -31,14 +27,14 @@ main {
     border-bottom: 3px;
     border-color: black;
     border-style: solid;
-    background-color: $background-colour;
+    background-color: layout.$background-colour;
     font-size: medium;
     padding: 10px;
     margin: 5px;
   }
 
   button {
-    background-color: $navy-blue;
+    background-color: layout.$navy-blue;
     font-family: 'Bungee';
     color: white;
   }
@@ -53,19 +49,19 @@ main {
 }
 
 .negative-warning {
-  color: $dark-red;
+  color: layout.$dark-red;
 }
 
 .emsg {
   display: none;
   background-color: #f1cfcf;
-  color: $dark-red;
+  color: layout.$dark-red;
   margin: 1rem;
   padding: 0.5rem;
   font-weight: 600;
   border: 0.125rem;
   border-style: dotted;
-  border-color: $dark-red;
+  border-color: layout.$dark-red;
 }
 
 /* Tablet Styles */
