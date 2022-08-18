@@ -11,14 +11,14 @@ const safetyCheck = function(str) {
 };
 
 const renderTweets = function(tweets) {
-// loops through tweets
+  // loops through tweets
   tweets = tweets.reverse();
   for (const tweetData of tweets) {
-// calls createTweetElement for each tweet
+    // calls createTweetElement for each tweet
     const $tweet = createTweetElement(tweetData);
     $(document).ready(function() {
-// takes return value and appends it to the tweets container
-      $('#tweets-container').append($tweet);
+      // takes return value and appends it to the tweets container
+      $("#tweets-container").append($tweet);
     });
   }
 };
@@ -51,29 +51,29 @@ const createTweetElement = function(tweet) {
 
 $(document).ready(function() {
   $(function() {
-    const $form = $('#tweet-form');
+    const $form = $("#tweet-form");
     $form.submit(function(event) {
-// prevents default post activity (navigating to /tweets/)
+      // prevents default post activity (navigating to /tweets/)
       event.preventDefault();
-      const submittedText = document.getElementById('tweet-text').value;
-// posting error messages for empty or too-long tweets
+      const submittedText = document.getElementById("tweet-text").value;
+      // posting error messages for empty or too-long tweets
       if (submittedText.length <= 0) {
-        $('#long-tweet-msg').hide();
-        $('#empty-tweet-msg').show("slow");
+        $("#long-tweet-msg").hide();
+        $("#empty-tweet-msg").show("slow");
         return;
       } else if (submittedText.length > 140) {
-        $('#empty-tweet-msg').hide();
-        $('#long-tweet-msg').show("slow");
+        $("#empty-tweet-msg").hide();
+        $("#long-tweet-msg").show("slow");
         return;
       }
-// toggling the tweet messages
-      $('#empty-tweet-msg').hide();
-      $('#long-tweet-msg').hide();
-// serializing the input for post request
+      // toggling the tweet messages
+      $("#empty-tweet-msg").hide();
+      $("#long-tweet-msg").hide();
+      // serializing the input for post request
       const tweetText = $(this).serialize();
       $.ajax({
         type: "POST",
-        url: '/tweets/',
+        url: "/tweets/",
         data: tweetText,
         success: function(res) {
           console.log(res);
@@ -81,27 +81,27 @@ $(document).ready(function() {
         },
         error: function(error) {
           console.error(error);
-        }
+        },
       })
-// once post request completes, reset counter, close tweet box, and reload the tweets container to incldue the newly-added tweet without reloading the page
+        // once post request completes, reset counter, close tweet box, and reload the tweets container to incldue the newly-added tweet without reloading the page
         .then(() => {
           this.reset();
           $("#counter").val(140);
           $("#compose-tweet-box").toggle();
-          $('#tweets-container').empty();
+          $("#tweets-container").empty();
           loadTweets();
-      });
+        });
     });
   });
 });
 
 const loadTweets = function() {
-  $.ajax( {
-    type: 'GET',
-    url: '/tweets/',
+  $.ajax({
+    type: "GET",
+    url: "/tweets/",
     success: function(res) {
-      $('#tweets-container').append(renderTweets(res));
-    }
+      $("#tweets-container").append(renderTweets(res));
+    },
   });
 };
 
