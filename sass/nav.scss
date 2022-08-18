@@ -1,4 +1,4 @@
-@use 'layout';
+@use 'presets';
 
 /* Mobile Styles */
 nav {
@@ -38,7 +38,7 @@ nav {
 }
 
 #toggle-btn:hover {
-  color: layout.$navy-blue;
+  color: presets.$navy-blue;
   bottom: -0.625rem;
 }
 
@@ -52,11 +52,11 @@ nav {
 @media only screen and (min-width: 1024px) {
 
   nav {
-    background: layout.$navy-blue;
+    background: presets.$navy-blue;
   }
 
   #toggle-btn:hover {
-    color: layout.$golden-yellow;
+    color: presets.$golden-yellow;
     bottom: -0.625rem;
   }
 

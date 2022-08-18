@@ -1,4 +1,4 @@
-@use 'layout';
+@use 'presets';
 
 /* Mobile Styles */
 .user-header {
@@ -10,7 +10,7 @@
   justify-content: center;
   align-items: center;
   align-content: center;
-  background-color: layout.$golden-yellow;
+  background-color: presets.$golden-yellow;
   background-image: url("https://www.transparenttextures.com/patterns/tex2res4.png");
 }
 
@@ -26,10 +26,8 @@ header p {
 
 /* Desktoop Styles */
 @media only screen and (min-width: 1024px) {
-
   .user-header {
     width: 30%;
     margin: 2rem 0 0 2.5rem;
   }
-
 }

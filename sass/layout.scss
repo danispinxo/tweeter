@@ -3,11 +3,8 @@
  * https://css-tricks.com/international-box-sizing-awareness-day/
  * Do not modify these two selectors, please
  */
- $background-colour: #f4f1ec;
- $navy-blue: #4056A1;
- $dark-red: #582b2b;
- $shadow-grey: #545149;
- $golden-yellow: #cb9815;
+
+ @use 'presets';
 
 html {
   box-sizing: border-box;
@@ -25,8 +22,8 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: $shadow-grey;
-  background-color: $background-colour;
+  color: presets.$shadow-grey;
+  background-color: presets.$background-colour;
   font-size: 1.5rem;
   font-family: 'Source Sans Pro', sans-serif;
 }
@@ -39,8 +36,8 @@ body {
   right: 1.5rem;
   width: 4.7rem;
   height: 4.7rem;
-  background: $dark-red;
-  color: $background-colour;
+  background: presets.$dark-red;
+  color: presets.$background-colour;
   border-radius: 50%;
   opacity: 75%;
   position: fixed;

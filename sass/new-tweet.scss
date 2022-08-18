@@ -1,4 +1,4 @@
-@use 'layout';
+@use 'presets';
 
 /* Mobile Styles */
 
@@ -9,7 +9,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-content: center;
-  background-color: layout.$background-colour;
+  background-color: presets.$background-colour;
 
   section.compose-tweet {
     display: none;
@@ -27,14 +27,14 @@ main {
     border-bottom: 3px;
     border-color: black;
     border-style: solid;
-    background-color: layout.$background-colour;
+    background-color: presets.$background-colour;
     font-size: medium;
     padding: 10px;
     margin: 5px;
   }
 
   button {
-    background-color: layout.$navy-blue;
+    background-color: presets.$navy-blue;
     font-family: 'Bungee';
     color: white;
   }
@@ -49,19 +49,19 @@ main {
 }
 
 .negative-warning {
-  color: layout.$dark-red;
+  color: presets.$dark-red;
 }
 
 .emsg {
   display: none;
   background-color: #f1cfcf;
-  color: layout.$dark-red;
+  color: presets.$dark-red;
   margin: 1rem;
   padding: 0.5rem;
   font-weight: 600;
   border: 0.125rem;
   border-style: dotted;
-  border-color: layout.$dark-red;
+  border-color: presets.$dark-red;
 }
 
 /* Tablet Styles */
