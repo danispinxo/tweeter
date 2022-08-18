@@ -15,7 +15,10 @@ This repository is the starter code for the project. I started by forking and cl
 - Nodedemon (not required for running, used server-side)
 
 ## Screenshots
-- placeholder
+![Compose Tweet Box in Desktop View](https://github.com/danispinxo/tweeter/blob/master/public/images/screenshots/desktop-compose.png)
+![Updated tweets in Tablet View](https://github.com/danispinxo/tweeter/blob/master/public/images/screenshots/tablet-tweets.png)
+![Error Message for Empty Tweet Post Request](https://github.com/danispinxo/tweeter/blob/master/public/images/screenshots/error-empty.png)
+![Error Message for Too-Long Post Request](https://github.com/danispinxo/tweeter/blob/master/public/images/screenshots/error-long.png)
 
 ## Features
 
